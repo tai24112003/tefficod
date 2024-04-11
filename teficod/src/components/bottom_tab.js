@@ -2,9 +2,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { View, Text, Animated } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import ManagerStack from '../routers/manager_stack';
-
-
-
+import ProfileScreen from '../views/Screen/ProfileScreen';
 function HomeScreen({ navigation }) {
     return (
         <View>
@@ -12,13 +10,7 @@ function HomeScreen({ navigation }) {
         </View>
     );
 }
-function ProfileScreen({ navigation }) {
-    return (
-        <View>
-            <Text>ProfileScreen</Text>
-        </View>
-    );
-}
+
 
 const Tab = createMaterialBottomTabNavigator();
 
