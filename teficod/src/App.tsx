@@ -12,7 +12,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // import HomeScreen from './views/homeScreen';
-import CropDetailScreen from './views/manager/crop_detail_screen'
 const Stack = createNativeStackNavigator();
 
 function App() {

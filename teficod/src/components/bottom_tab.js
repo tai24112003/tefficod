@@ -2,7 +2,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { View, Text, Animated } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import ManagerStack from '../routers/manager_stack';
-import ProfileScreen from '../views/Screen/ProfileScreen';
+import ProfileStack from '../routers/profile_stack';
 function HomeScreen({ navigation }) {
     return (
         <View>
@@ -50,7 +50,7 @@ export default function BottomTabs() {
                     ),
                 }}
             />
-            <Tab.Screen name="Profile" component={ProfileScreen}
+            <Tab.Screen name="Profile" component={ProfileStack}
                 options={{
                     tabBarIcon: ({ color }) => (
                         <Icon name="user-o" size={30} color={color} />
