@@ -1,5 +1,6 @@
-import { ScrollView, Text, View, TouchableOpacity } from "react-native"
+import { ScrollView, Text, View, TouchableOpacity, Button } from "react-native"
 import styles from "../../styles"
+import BoxTitle from "../../components/box_title"
 
 export default function CropsScreen({ navigatio, route }) {
     return (
@@ -8,9 +9,23 @@ export default function CropsScreen({ navigatio, route }) {
                 <Text style={[styles.textHeader]}>
                     {route.params.title}
                 </Text>
-              <Text>
-                Crops
-              </Text>
+            </View>
+            <View>
+                <TouchableOpacity onPress={() => console.log("press")}
+                    style={[{
+                        backgroundColor: styles.primaycolor, alignSelf: "flex-end",
+                        paddingHorizontal: 15, paddingVertical: 5,
+                        borderRadius: 50
+                    }]}
+                >
+                    <Text style={[{ fontSize: 18, color: "#fff", fontWeight: "bold" }]}>Add</Text>
+                </TouchableOpacity>
+            </View>
+            <View style={[{flexDirection: "row", flexWrap:"wrap", gap:15, marginTop: 20}]}>
+                <BoxTitle isProduct={true} title={"Dâu tằm "} iconName="flower-outline" navigation={navigatio} />
+                <BoxTitle isProduct={true} title={"Dâu tằm 2"} iconName="flower-outline" navigation={navigatio} />
+                <BoxTitle isProduct={true} title={"Dâu tằm 3"} iconName="flower-outline" navigation={navigatio} />
+                <BoxTitle isProduct={true} title={"Xà lách thủy tinh"} iconName="flower-outline" navigation={navigatio} />
             </View>
         </ScrollView>
     )

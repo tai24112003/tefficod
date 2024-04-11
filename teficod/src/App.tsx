@@ -14,10 +14,6 @@ function App() {
   return (
     <NavigationContainer>
       <BottomTabs />
-      {/* <Stack.Navigator>
-        <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ headerShown: false }} />
-        {/* <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }} /> 
-      </Stack.Navigator> */}
     </NavigationContainer>
   );
 }

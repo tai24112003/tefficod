@@ -6,28 +6,33 @@ import { IconButton, Icon } from 'react-native-paper';
 
 export default function BoxTitle({ isProduct, title, numCount, iconName, navigation }) {
     const { width, height } = Dimensions.get('window');
-    const routeName = title.replace(/\s+/g, '');
+    const routeName = title?.replace(/\s+/g, '');
     return (
         <TouchableOpacity
             onPress={() => {
-                navigation.navigate(routeName, { title: title })
+                if (!isProduct) {
+                    navigation.navigate(routeName, { title: title })
+                }
             }}
         >
             <View style={[styles.boxTitle, { backgroundColor: styles.primaycolor, width: (width - 45) / 2 }]}>
                 <View style={[{ alignItems: !isProduct ? "flex-start" : "flex-end" }]}>
                     {
-                        !isProduct ? (numCount ? 
+                        !isProduct ? (numCount ?
                             <View style={[styles.containerNumCount]}>
                                 <Text style={[{ color: "#fff" }]}>{numCount}</Text>
                             </View>
-                         : <View style={{ height: 20 }}></View>)
+                            : <View style={{ height: 20 }}></View>)
                             : (
-                                <IconButton
-                                    icon="trash-can-outline"
-                                    iconColor={"red"}
-                                    size={25}
-                                    onPress={() => console.log('Pressed')}
-                                />
+                                <View style={[{ width: 40, marginTop: -15 }]}>
+
+                                    <IconButton
+                                        icon="trash-can-outline"
+                                        iconColor={"red"}
+                                        size={25}
+                                        onPress={() => console.log('Pressed')}
+                                    />
+                                </View>
 
                             )}
                 </View>
