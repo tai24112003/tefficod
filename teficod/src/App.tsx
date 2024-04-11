@@ -6,19 +6,24 @@
  */
 import React from 'react';
 
+
+import BottomTabs from './components/bottom_tab';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import LoginScreen from './views/login_screen';
-const Stack = createNativeStackNavigator();
 
+// import HomeScreen from './views/homeScreen';
+import CropDetailScreen from './views/manager/crop_detail_screen'
+const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ headerShown: false }} />
-        {/* <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }} /> */}
-      </Stack.Navigator>
+      <BottomTabs />
+      {/* {<Stack.Navigator> */}
+      {/* <Stack.Screen name="CropDetailScreen" component={CropDetailScreen} options={{ headerShown: false }} /> */}
+      {/* <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ headerShown: false }} /> */}
+      {/* <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }} /> */}
+      {/* </Stack.Navigator>} */}
     </NavigationContainer>
   );
 }
