@@ -7,18 +7,17 @@
 import React from 'react';
 
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import LoginScreen from './views/login_screen';
-const Stack = createNativeStackNavigator();
+import BottomTabs from './components/bottom_tab';
 
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <BottomTabs />
+      {/* <Stack.Navigator>
         <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ headerShown: false }} />
-        {/* <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }} /> */}
-      </Stack.Navigator>
+        {/* <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }} /> 
+      </Stack.Navigator> */}
     </NavigationContainer>
   );
 }
