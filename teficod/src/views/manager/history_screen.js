@@ -1,47 +1,58 @@
-import { ScrollView, Text, View, TouchableOpacity } from "react-native"
+import { ScrollView, Text, View, TouchableOpacity, Dimensions } from "react-native"
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import styles from "../../styles"
+import PickDate from "../../components/pick_date";
+import HistoryDetail from "../../components/history_detail";
 
 
 
 const HDate = () => (
-    <View>
-        <Text style={[{ color: "#000" }]}>Dateeeeeee</Text>
-    </View>
+    <ScrollView style={[{ backgroundColor: "#fff", }]}>
+        <PickDate selectedTab={"Date"} />
+        <HistoryDetail title={"Channel 1"} />
+        <HistoryDetail title={"Channel 2"} />
+        <HistoryDetail title={"Channel 3"} />
+
+    </ScrollView>
 )
 
 const HWeek = () => (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={[{ color: "#000" }]}>Week</Text>
-    </View>
+    <ScrollView>
+        <PickDate selectedTab={"Week"} />
+    </ScrollView>
 )
 const HMonth = () => (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={[{ color: "#000" }]}>Month</Text>
-    </View>
+    <ScrollView>
+        <PickDate selectedTab={"Month"} />
+    </ScrollView>
 )
 const HYear = () => (
-    <View style={[{backgroundColor:"#000", flex:1}]}>
-        <Text style={[{color:"#000"}]}>Year</Text>
-    </View>
+    <ScrollView>
+        <PickDate selectedTab={"Year"} />
+    </ScrollView>
 )
 const HistoryTab = createMaterialTopTabNavigator();
-export default function HistoryScreen({ navigatio, route }) {
-    
+
+function HistoryTabs({ navigation, route }) {
     return (
-        <ScrollView style={[styles.containerScreen]}>
-            <View style={[{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }]}>
+        <HistoryTab.Navigator>
+            <HistoryTab.Screen name="Date" component={HDate} />
+            <HistoryTab.Screen name="Week" component={HWeek} />
+            <HistoryTab.Screen name="Month" component={HMonth} />
+            <HistoryTab.Screen name="Year" component={HYear} />
+        </HistoryTab.Navigator>
+    )
+}
+
+export default function HistoryScreen({ navigation, route }) {
+    return (
+        <View style={[styles.containerScreen, { paddingHorizontal: 0, height: Dimensions.get('window').height-173 }]}>
+            <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
                 <Text style={[styles.textHeader]}>
                     {route.params.title} [Multi-Channel Controller]
                 </Text>
             </View>
-            <HistoryTab.Navigator>
-                <HistoryTab.Screen name="Date" component={HDate} />
-                <HistoryTab.Screen name="Week" component={HWeek} />
-                <HistoryTab.Screen name="Month" component={HMonth} />
-                <HistoryTab.Screen name="Year" component={HYear} />
-            </HistoryTab.Navigator>
-        </ScrollView>
+            <HistoryTabs/>
+        </View>
     )
 }
-

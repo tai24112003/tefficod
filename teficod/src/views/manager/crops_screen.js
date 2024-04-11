@@ -2,7 +2,7 @@ import { ScrollView, Text, View, TouchableOpacity, Button } from "react-native"
 import styles from "../../styles"
 import BoxTitle from "../../components/box_title"
 
-export default function CropsScreen({ navigatio, route }) {
+export default function CropsScreen({ navigatio: navigation, route }) {
     return (
         <ScrollView style={[styles.containerScreen]}>
             <View style={[{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }]}>
@@ -22,10 +22,10 @@ export default function CropsScreen({ navigatio, route }) {
                 </TouchableOpacity>
             </View>
             <View style={[{flexDirection: "row", flexWrap:"wrap", gap:15, marginTop: 20}]}>
-                <BoxTitle isProduct={true} title={"Dâu tằm "} iconName="flower-outline" navigation={navigatio} />
-                <BoxTitle isProduct={true} title={"Dâu tằm 2"} iconName="flower-outline" navigation={navigatio} />
-                <BoxTitle isProduct={true} title={"Dâu tằm 3"} iconName="flower-outline" navigation={navigatio} />
-                <BoxTitle isProduct={true} title={"Xà lách thủy tinh"} iconName="flower-outline" navigation={navigatio} />
+                <BoxTitle isProduct={true} title={"Dâu tằm "} iconName="flower-outline" navigation={navigation} />
+                <BoxTitle isProduct={true} title={"Dâu tằm 2"} iconName="flower-outline" navigation={navigation} />
+                <BoxTitle isProduct={true} title={"Dâu tằm 3"} iconName="flower-outline" navigation={navigation} />
+                <BoxTitle isProduct={true} title={"Xà lách thủy tinh"} iconName="flower-outline" navigation={navigation} />
             </View>
         </ScrollView>
     )

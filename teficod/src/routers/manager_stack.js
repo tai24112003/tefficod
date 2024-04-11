@@ -5,9 +5,10 @@ import ManagerScreen from "../views/manager/manager_screen";
 import DevicesManagerScreen from "../views/manager/devices_manager_screen";
 import DevicesTimerScreen from "../views/manager/devices_timer_screen";
 import GrowthCycleScreen from "../views/manager/growth_cycle_screen";
-import HistoryScreen from "../views/manager/history_screen";
+import HistoryTab from "../views/manager/history_screen";
 import CropsScreen from "../views/manager/crops_screen";
 import styles from "../styles";
+import HistoryScreen from "../views/manager/history_screen";
 
 const IconBack = ({navigation}) => (
     <IconButton

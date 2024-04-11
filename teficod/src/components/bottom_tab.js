@@ -1,7 +1,6 @@
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 import { View, Text, Animated } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import ManagerScreen from '../views/manager/manager_screen';
 import ManagerStack from '../routers/manager_stack';
 
 

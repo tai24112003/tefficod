@@ -12,9 +12,9 @@ import BottomTabs from './components/bottom_tab';
 
 function App() {
   return (
-    <NavigationContainer>
-      <BottomTabs />
-    </NavigationContainer>
+      <NavigationContainer>
+        <BottomTabs />
+      </NavigationContainer>
   );
 }
 

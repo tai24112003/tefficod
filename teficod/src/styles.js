@@ -6,12 +6,12 @@ const styles = StyleSheet.create({
     },
     containerScreen: {
         paddingHorizontal: 15,
-        backgroundColor: "#fff"
+        backgroundColor: "#fff",
     },
     textHeader: {
         fontSize: 25,
         fontWeight: "bold",
-        color: "#000"
+        color: "#000",
     },
     boxTitle: {
         padding: 10,
