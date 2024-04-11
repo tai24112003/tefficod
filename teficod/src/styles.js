@@ -37,9 +37,6 @@ const styles = StyleSheet.create({
         color: "#fff",
         fontSize:20
     },
-    textMultiChannel:{
-        
-    },
     iconHeaderStyle: { marginLeft: -25, marginRight: -10 },
     primaycolor: "#0E9A75",
     iconThumbnailSize: 45,
