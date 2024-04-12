@@ -3,13 +3,8 @@ import { View, Text, Animated } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import ManagerStack from '../routers/manager_stack';
 import ProfileStack from '../routers/profile_stack';
-function HomeScreen({ navigation }) {
-    return (
-        <View>
-            <Text>HomeScreen</Text>
-        </View>
-    );
-}
+import HomeScreen from '../views/home/home_screen';
+
 
 const Tab = createMaterialBottomTabNavigator();
 
