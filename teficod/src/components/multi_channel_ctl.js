@@ -25,7 +25,7 @@ export default function MultiChannelController({sn, model, firmwareV, mfg, statu
                 paddingAnim,
                 {
                     toValue: isVisible ? 0 : 8,
-                    duration: isVisible ? 500 : 0,
+                    duration: isVisible?500:0,
                     easing: Easing.linear,
                     useNativeDriver: false,
                 }
@@ -45,7 +45,7 @@ export default function MultiChannelController({sn, model, firmwareV, mfg, statu
     return (
         <View style={[{ flexGrow: 1 }]}>
             <TouchableOpacity
-                onPress={() => {
+                onPress={()=>{
                     toggleVisibility()
                 }
 

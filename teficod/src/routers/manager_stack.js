@@ -27,7 +27,7 @@ export default function ManagerStack() {
             screenOptions={{
                 headerTintColor: styles.primaycolor, // Màu sắc của icon
                 headerTitleStyle: {
-                    fontSize: 30, // Kích thước của icon
+                    fontSize: 24, // Kích thước của icon
                 },
 
                 headerShadowVisible: false

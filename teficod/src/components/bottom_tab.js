@@ -11,7 +11,6 @@ function HomeScreen({ navigation }) {
     );
 }
 
-
 const Tab = createMaterialBottomTabNavigator();
 
 export default function BottomTabs() {
