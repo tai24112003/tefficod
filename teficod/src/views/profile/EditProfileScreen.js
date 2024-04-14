@@ -14,15 +14,6 @@ export default EditProfileScreen = ({ navigation }) => {
     (<StatusBar></StatusBar>),
     (
       <View>
-        <View>
-          <TouchableOpacity style={styles.back}>
-            <Icon source={"chevron-left"} size={30} color="#0093B0" />
-
-            <Text style={styles.textBack} textBack>
-              Back
-            </Text>
-          </TouchableOpacity>
-        </View>
         <View style={styles.viewProfile}>
           <View style={styles.textEditProfile}>
             <Text style={styles.styleTextEdit}>Edit Profile</Text>
@@ -32,7 +23,7 @@ export default EditProfileScreen = ({ navigation }) => {
               <Icon
                 source="account-outline"
                 size={30}
-                color="#00ACBF"
+                color="#0E9A75"
               />
 
               <TextInput
@@ -44,7 +35,7 @@ export default EditProfileScreen = ({ navigation }) => {
             </View>
             <View style={styles.line}></View>
             <View style={styles.editOption}>
-              <Icon source="home-outline" size={30} color="#00ACBF" />
+              <Icon source="home-outline" size={30} color="#0E9A75" />
               <TextInput
                 style={styles.inputEdit}
                 placeholder="Teficod.com"
@@ -54,7 +45,7 @@ export default EditProfileScreen = ({ navigation }) => {
             </View>
             <View style={styles.line}></View>
             <View style={styles.editOption}>
-              <Icon source="email-outline" size={30} color="#00ACBF" />
+              <Icon source="email-outline" size={30} color="#0E9A75" />
               <TextInput
                 style={styles.inputEdit}
                 placeholder="Teficod@gmail.com"

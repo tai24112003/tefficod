@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 25,
     fontWeight: "bold",
-    color: "#0093B0",
+    color: "#0E9A75",
   },
   info: {
     justifyContent: "space-around",
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   textOption: {
-    color: "#0093B0",
+    color: "#0E9A75",
     fontSize: 18,
   },
   line: {
@@ -138,12 +138,12 @@ const styles = StyleSheet.create({
   iconBack: {
     fontSize: 25,
     fontWeight: "bold",
-    color: "#0093B0",
+    color: "#0E9A75",
   },
   textBack: {
     fontSize: 25,
     fontWeight: "bold",
-    color: "#0093B0",
+    color: "#0E9A75",
   },
   textEditProfile:{
     width:'100%',
@@ -174,7 +174,7 @@ const styles = StyleSheet.create({
   },
   btnSave:{
     marginTop:30,
-    backgroundColor:'#0093B0',
+    backgroundColor:'#0E9A75',
     width:windowWidth*0.5,
     height:windowHeight*0.06,
     borderRadius:10,

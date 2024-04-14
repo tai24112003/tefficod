@@ -2,7 +2,7 @@ import { ScrollView, Text, View, TouchableOpacity, Button } from "react-native"
 import styles from "../../styles"
 import BoxTitle from "../../components/box_title"
 
-export default function CropsScreen({ navigatio: navigation, route }) {
+export default function CropsScreen({navigation, route }) {
     return (
         <ScrollView style={[styles.containerScreen]}>
             <View style={[{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }]}>

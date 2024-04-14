@@ -12,6 +12,8 @@ export default function BoxTitle({ isProduct, title, numCount, iconName, navigat
             onPress={() => {
                 if (!isProduct) {
                     navigation.navigate(routeName, { title: title })
+                }else{
+                    navigation.navigate('CropDetailScreen')
                 }
             }}
         >

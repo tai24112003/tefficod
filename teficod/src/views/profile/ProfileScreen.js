@@ -36,34 +36,44 @@ export default ProfileScreen = ({ navigation }) => {
         </View>
         <View style={styles.info}>
           <View style={styles.option}>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('EditProfileScreen')}
+
+            >
                 <Text style={styles.textOption}>Edit Profile</Text> 
             </TouchableOpacity>
             <TouchableOpacity>
-              <Icon source={"pencil"} size={27} color="#00ACBF" />
+              <Icon source={"pencil"} size={27} color="#0E9A75" />
             </TouchableOpacity>
           </View >
           <View style={styles.line}></View>
           <View style={styles.option}>
-          <TouchableOpacity>
+          <TouchableOpacity
+              onPress={() => navigation.navigate('ChangePasswordScreen')}
+          >
                 <Text style={styles.textOption}>Change Password</Text> 
             </TouchableOpacity>
             <TouchableOpacity>
-                <Icon source={"key"} size={27} color="#00ACBF" />
+              <Icon source={"key"} size={27} color="#0E9A75" />
             </TouchableOpacity>
           </View>
           <View style={styles.line}></View>
           <View style={styles.option}>
-          <TouchableOpacity>
+          <TouchableOpacity
+              onPress={() => navigation.navigate('AboutTeficodScreen')}
+
+          >
                 <Text style={styles.textOption}>About Teficod</Text> 
             </TouchableOpacity>
             <TouchableOpacity>
-              <Icon source={"information-outline"} size={27} color="#00ACBF" />
+              <Icon source={"information-outline"} size={27} color="#0E9A75" />
             </TouchableOpacity>
           </View>
         </View>
         <View >
-            <TouchableOpacity style={styles.logOut}>
+            <TouchableOpacity
+              onPress={()=> navigation.navigate("LoginScreen")}
+             style={styles.logOut}>
                 <View><Text style={styles.textLogOut}>Log Out</Text></View>
             <View><Icon source={"logout"} size={27} color="red" /></View>
             </TouchableOpacity>

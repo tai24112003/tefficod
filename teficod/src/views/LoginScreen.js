@@ -10,7 +10,7 @@ import {
   Dimensions,
   Text,
 } from "react-native";
-import styles from "./styles";
+import styles from "./profile/styles";
 import { Icon } from 'react-native-paper'
 
 import { Component } from "react";
@@ -21,13 +21,13 @@ export default login = ({ navigation }) => {
   return (
     <ImageBackground
       style={styles.ImageBackground}
-      source={require("../../assets/img/logo_img.png")}
+      source={require("../assets/img/logo_img.png")}
     >
       <StatusBar></StatusBar>
       <SafeAreaView>
         <View style={styles.logo}>
           <Image
-            source={require("../../assets/img/logo_img.png")}
+            source={require("../assets/img/logo_img.png")}
             style={styles.imageLogo}
           ></Image>
         </View>
@@ -73,7 +73,7 @@ export default login = ({ navigation }) => {
         <View style={styles.viewBtn}>
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate("home");
+              navigation.navigate("BottomTabs");
             }}
             style={styles.btnSignIn}
           >

@@ -9,6 +9,7 @@ import HistoryTab from "../views/manager/history_screen";
 import CropsScreen from "../views/manager/crops_screen";
 import styles from "../styles";
 import HistoryScreen from "../views/manager/history_screen";
+import CropDetailScreen from "../views/manager/crop_detail_screen";
 
 const IconBack = ({navigation}) => (
     <IconButton
@@ -80,6 +81,15 @@ export default function ManagerStack() {
             <MStack.Screen
                 name="Crops"
                 component={CropsScreen}
+                options={({ navigation }) => ({
+                    title: 'Back',
+                    headerLeft: () => <IconBack navigation={navigation} />
+                    ,
+                })}
+            />
+            <MStack.Screen
+                name="CropDetailScreen"
+                component={CropDetailScreen}
                 options={({ navigation }) => ({
                     title: 'Back',
                     headerLeft: () => <IconBack navigation={navigation} />

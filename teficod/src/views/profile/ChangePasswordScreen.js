@@ -11,17 +11,7 @@ export default ChangePasswordScreen = ({ navigation }) => {
   return (
     (
       <View>
-        <View>
-          <TouchableOpacity style={styles.back}>
-            <View>
-              <Icon source={"chevron-left"} size={30} color="#0093B0" />
-
-            </View>
-            <Text style={styles.textBack} textBack>
-              Back
-            </Text>
-          </TouchableOpacity>
-        </View>
+        
         <View style={styles.viewProfile}>
           <View style={styles.textEditProfile}>
             <Text style={styles.styleTextEdit}>Change Password</Text>

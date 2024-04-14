@@ -8,7 +8,7 @@ import HomeScreen from '../views/home/home_screen';
 
 const Tab = createMaterialBottomTabNavigator();
 
-export default function BottomTabs() {
+export default function BottomTabs({}) {
     return (
         <Tab.Navigator
             initialRouteName="Home"
